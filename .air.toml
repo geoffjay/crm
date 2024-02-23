@@ -1,0 +1,33 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o build/crm"
+bin = "build/crm"
+full_bin = "build/crm"
+include_ext = ["go"]
+exclude_dir = [
+  "build",
+  "coverage",
+  "docs",
+  "scripts",
+  "tmp",
+]
+exclude_regex = ["_test.go"]
+exclude_unchanged = true
+delay = 1000 # ms
+stop_on_error = true
+log = "air.log"
+send_interrupt = true
+
+[log]
+time = false
+
+[color]
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+clean_on_exit = true

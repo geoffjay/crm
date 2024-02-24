@@ -13,16 +13,16 @@ import (
 func main() {
 	initLogging()
 
-	// app := app{}
-	// app.init()
+	app := app{}
+	app.init()
 
-	fields := log.Fields{"service": "app", "context": "main"}
+	fields := log.Fields{"service": "crm", "context": "main"}
 
 	ctx, cancelFunc := context.WithCancel(context.Background())
 	wg := &sync.WaitGroup{}
 
 	wg.Add(1)
-	// go app.run(ctx, wg)
+	go app.run(ctx, wg)
 
 	log.WithFields(fields).Debug("starting")
 

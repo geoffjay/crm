@@ -1,0 +1,21 @@
+*~
+*.sw[op]
+tags
+
+.env
+.node-version
+
+cert/*.cr[lt]
+cert/*.csr
+cert/*.key
+cert/*.pem
+
+/build/
+/coverage/
+/target/
+/tmp/
+/vendor/
+
+# generated files
+/views/**/*_templ.go
+/views/**/*_templ.txt
